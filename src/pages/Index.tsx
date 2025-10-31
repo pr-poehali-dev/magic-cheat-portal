@@ -185,15 +185,39 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            
-            <div className="text-center text-sm text-muted-foreground">
-              <p>Доступные способы связи:</p>
-              <div className="flex justify-center gap-4 mt-2">
-                <Badge variant="outline" className="border-yellow-500/30">WhatsApp</Badge>
-                <Badge variant="outline" className="border-yellow-500/30">Telegram</Badge>
-                <Badge variant="outline" className="border-yellow-500/30">Звонок</Badge>
+
+            <div className="bg-muted/50 p-6 rounded-lg border border-yellow-500/20">
+              <h3 className="font-bold text-lg mb-4 text-yellow-500">Инструкция по покупке:</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-yellow-500 font-bold text-sm">1</span>
+                  </div>
+                  <p className="text-sm pt-1">Скиньте деньги</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-yellow-500 font-bold text-sm">2</span>
+                  </div>
+                  <p className="text-sm pt-1">Отправьте скрин перевода в личные сообщения в телеграмме <a href="https://t.me/PashaCoder" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:underline font-semibold">@PashaCoder</a></p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-yellow-500 font-bold text-sm">3</span>
+                  </div>
+                  <p className="text-sm pt-1">После того как скинули я вам отправлю ключ через 20-30 минут</p>
+                </div>
               </div>
             </div>
+            
+            <Button 
+              onClick={() => window.open('https://t.me/PashaCoder', '_blank')}
+              className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black font-bold"
+              size="lg"
+            >
+              <Icon name="Send" size={20} className="mr-2" />
+              Написать в Telegram
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
