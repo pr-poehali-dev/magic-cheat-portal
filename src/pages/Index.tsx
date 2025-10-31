@@ -106,27 +106,20 @@ const Index = () => {
           ))}
         </div>
 
-        <section className="mb-16">
+        <section className="mb-16 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Функции <span className="text-yellow-500">Премиум</span> Чита
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-4">
             {features.map((feature, index) => (
-              <Card 
+              <div 
                 key={index}
-                className="bg-card/50 backdrop-blur-sm border-yellow-500/20 p-6 hover:border-yellow-500/50 transition-all hover:shadow-xl hover:shadow-yellow-500/10 hover:scale-105 group"
+                className="flex items-center gap-3 bg-card/30 backdrop-blur-sm border border-yellow-500/20 p-4 rounded-lg hover:border-yellow-500/40 transition-all"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center group-hover:bg-yellow-500/20 transition-all">
-                    <Icon name={feature.icon} size={24} className="text-yellow-500" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-xl mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground text-sm">{feature.description}</p>
-                  </div>
-                </div>
-              </Card>
+                <Icon name={feature.icon} size={20} className="text-yellow-500 flex-shrink-0" />
+                <span className="text-base">{feature.title}</span>
+              </div>
             ))}
           </div>
         </section>
